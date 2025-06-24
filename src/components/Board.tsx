@@ -47,18 +47,15 @@ const Board: React.FC = () => {
   const [currentCategory, setCurrentCategory] = useState('');
   const [currentValue, setCurrentValue] = useState('');
 
-  // Debug: log revealedBoxes whenever it changes
   useEffect(() => {
     console.log('revealedBoxes:', revealedBoxes);
   }, [revealedBoxes]);
 
-  // Create a consistent unique ID for a box
   const getBoxId = (category: string, categoryIndex: number, value: string, valueIndex: number) => {
     return `${category}-${value}-${categoryIndex}-${valueIndex}`;
   };
 
   const handleBoxClick = (category: string, categoryIndex: number, value: string, valueIndex: number) => {
-    // Use the same ID generation function
     const boxId = getBoxId(category, categoryIndex, value, valueIndex);
     console.log('Clicked box with ID:', boxId);
     

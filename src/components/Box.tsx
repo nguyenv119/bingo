@@ -14,6 +14,8 @@ const Box: React.FC<BoxProps> = ({ category, value, onClick, isRevealed }) => {
     console.log(`Box ${category}-${value} isRevealed: ${isRevealed}`);
   }, [isRevealed, category, value]);
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/bingo' : '';
+
   return (
     <motion.div
       className="flex items-center justify-center cursor-pointer rounded-md shadow-sm overflow-hidden relative"
@@ -28,7 +30,7 @@ const Box: React.FC<BoxProps> = ({ category, value, onClick, isRevealed }) => {
       {/* Image layer */}
       <div className="absolute inset-0">
         <img 
-          src={isRevealed ? '/images/bruh.png' : '/images/sus.png'}
+          src={`${basePath}/images/${isRevealed ? 'bruh.png' : 'sus.png'}`}
           alt={isRevealed ? 'Bruh' : 'Pook'}
           className={`object-cover w-full h-full ${isRevealed ? 'opacity-30 mix-blend-multiply' : 'opacity-30'}`}
         />

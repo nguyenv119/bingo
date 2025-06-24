@@ -51,6 +51,8 @@ const Animation: React.FC<AnimationProps> = ({ imageSrc }) => {
   const [glitchActive, setGlitchActive] = useState(false);
   const [hearts, setHearts] = useState<any[]>([]);
   
+  const basePath = process.env.NODE_ENV === 'production' ? '/bingo' : '';
+  
   useEffect(() => {
     const emojiCount = Math.floor(Math.random() * 4) + 3; // 3-6 emojis
     const newEmojis = Array(emojiCount).fill(0).map(() => 
@@ -162,7 +164,7 @@ const Animation: React.FC<AnimationProps> = ({ imageSrc }) => {
           variants={imageVariants}
         >
           <img 
-            src={`/images/${imageSrc}`}
+            src={`${basePath}/images/${imageSrc}`}
             alt="Memory"
             className="object-contain w-full h-full"
           />

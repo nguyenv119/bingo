@@ -8,8 +8,13 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const basePath = process.env.NODE_ENV === 'production' ? '/bingo' : '';
+  
   useEffect(() => {
-    audioRef.current = new Audio(audioSrc);
+    const fullAudioSrc = `${basePath}${audioSrc}`;
+    console.log('Loading audio from:', fullAudioSrc);
+    
+    audioRef.current = new Audio(fullAudioSrc);
     
     return () => {
       if (audioRef.current) {
@@ -17,7 +22,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
         audioRef.current = null;
       }
     };
-  }, [audioSrc]);
+  }, [audioSrc, basePath]);
 
   const togglePlayPause = () => {
     if (!audioRef.current) return;
@@ -25,7 +30,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      audioRef.current.play();
+      audioRef.current.play().catch(error => {
+        console.error('Error playing audio:', error);
+      });
     }
     
     setIsPlaying(!isPlaying);
