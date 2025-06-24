@@ -1,0 +1,74 @@
+{
+  "P": {
+    "P": {
+      "text": "Your nose and mouth",
+      "image": "pook.png"
+    },
+    "O": {
+      "text": "Your soft touch",
+      "image": "pook.png"
+    },
+    "O2": {
+      "text": "Your funny faces :3",
+      "image": "pook.png"
+    },
+    "K": {
+      "text": "When youre trying to talk softly to me",
+      "image": "pook.png"
+    }
+  },
+  "O1": {
+    "P": {
+      "text": "When you initiate! Emotionally and physically",
+      "image": "pook.png"
+    },
+    "O": {
+      "text": "Glowing me up",
+      "image": "pook.png"
+    },
+    "O2": {
+      "text": "Amazing food taste!",
+      "image": "pook.png"
+    },
+    "K": {
+      "text": "The way you care about me",
+      "image": "pook.png"
+    }
+  },
+  "O2": {
+    "P": {
+      "text": "Your trust in me: vulnerability ",
+      "image": "pook.png"
+    },
+    "O": {
+      "text": "The way you write and smell!",
+      "image": "pook.png"
+    },
+    "O2": {
+      "text": "How you notice little and big things about me i never realized",
+      "image": "pook.png"
+    },
+    "K": {
+      "text": "Reminding me to take care of myself",
+      "image": "pook.png"
+    }
+  },
+  "K": {
+    "P": {
+      "text": "Your funny tantrums the nggggnggg, when we roll out on the bed together",
+      "image": "pook.png"
+    },
+    "O": {
+      "text": "Your kindness to strangers",
+      "image": "pook.png"
+    },
+    "O2": {
+      "text": "Back scratches!",
+      "image": "pook.png"
+    },
+    "K": {
+      "text": "Working together to do chores ",
+      "image": "pook.png"
+    }
+  }
+} 
