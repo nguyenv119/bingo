@@ -82,7 +82,7 @@ const Board: React.FC = () => {
   return (
     <div className="container mx-auto px-4 max-w-3xl">
       <header className="py-4 mb-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-black">Pook Bingo</h1>
+        <h1 className="text-2xl font-bold text-black">pook bingo</h1>
         <nav className="flex space-x-4 items-center">
           <AudioPlayer audioSrc="/audio/Coldplay - Sparks.mp3" />
         </nav>

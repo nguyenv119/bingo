@@ -7,16 +7,16 @@ interface AnimationProps {
 
 const emojis = ['😂', '💀', '✨', '🔥', '💯', '🥶', '👁️', '🤪', '😭', '🙌'];
 const memeTexts = [
-  'Pewkie:', 
-  'SOOOOO CUTEEEE...',
-  'I love you so much baby',
-  'Cutie Patootie',
-  'Wifey Wook',
-  'My sweet darling',
-  "I'm so lucky to have you",
-  'My home, my comfort',
-  'GOON DEMON',
-  'Squish your cheeks pook'
+  'pewkie:', 
+  'sooooo cuteeee...',
+  'i love you so much baby',
+  'cutie patootie',
+  'wifey wook',
+  'my sweet darling',
+  "i'm so lucky to have you",
+  'my home, my comfort',
+  'goon demon',
+  'squish your cheeks pook'
 ];
 
 const getRandomPosition = () => {
